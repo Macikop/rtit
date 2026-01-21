@@ -217,7 +217,7 @@ if __name__ == '__main__':
                 if len(args) == 3:
                     try:
                         turnus = int(args[2])
-                        import_to_db("uczestnicy.csv", turnus)
+                        import_to_db("loader/uczestnicy.csv", turnus)
                         assign_wychowawcy(WYCHOWAWCY)
                         print("Data inserted and wychowawcy assigned")
                     except ValueError:

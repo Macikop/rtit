@@ -93,7 +93,7 @@ def random_timestamp():
     return dt.strftime('%Y/%m/%d %I:%M:%S %p EEST')
 
 if __name__ == "__main__":
-    with open(os.path.join(os.path.dirname(__file__), 'uczestnicy.csv'), 'w', newline='', encoding='utf-8') as f:
+    with open(os.path.join(os.path.dirname(__file__), 'loader/uczestnicy.csv'), 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         rows = 1000
         writer.writerow(["id","Imię","Nazwisko","Turnus","Data urodzenia","Czy pierwszy raz","Płeć dziecka","Czy dziecko zażywa leki?","Uwagi","rodo"])

@@ -10,8 +10,6 @@ import sys
 
 import db_lib
 
-
-
 card_width = 1096
 card_hight = 620
 tiles_x = 2
@@ -76,13 +74,13 @@ nicknames_second = [
 ]
 
 
-template_path = os.path.join(os.path.dirname(__file__), "template.png")
+template_path = os.path.join(os.path.dirname(__file__), "legitymacje/template.png")
 
-georgia_font = os.path.join(os.path.dirname(__file__), "fonts/georgia.ttf")
-linlibretine_font = os.path.join(os.path.dirname(__file__), "fonts/LinLibertine_DR.otf")
-linlibretine_BI_font = os.path.join(os.path.dirname(__file__), "fonts/LinLibertine_RBI.otf")
-linlibretine_B_font = os.path.join(os.path.dirname(__file__), "fonts/LinLibertine_RB.otf")
-gabriola_font = os.path.join(os.path.dirname(__file__), "fonts/gabriola.ttf")
+georgia_font = os.path.join(os.path.dirname(__file__), "legitymacje/fonts/georgia.ttf")
+linlibretine_font = os.path.join(os.path.dirname(__file__), "legitymacje/fonts/LinLibertine_DR.otf")
+linlibretine_BI_font = os.path.join(os.path.dirname(__file__), "legitymacje/fonts/LinLibertine_RBI.otf")
+linlibretine_B_font = os.path.join(os.path.dirname(__file__), "legitymacje/fonts/LinLibertine_RB.otf")
+gabriola_font = os.path.join(os.path.dirname(__file__), "legitymacje/fonts/gabriola.ttf")
 
 def connect_to_db():
     login = db_lib.get_db_data()
@@ -226,7 +224,7 @@ def output_from_list(name_list):
 
     sheets = tile_cards(list_of_cards)
     rgb_sheets = [sheet.convert("RGB") for sheet in sheets]
-    output_path = os.path.join(os.path.dirname(__file__), "output/to_print.pdf")
+    output_path = os.path.join(os.path.dirname(__file__), "legitymacje/output/to_print.pdf")
     if rgb_sheets:
         rgb_sheets[0].save(
             output_path,

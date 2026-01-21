@@ -15,8 +15,8 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-docx_path = os.path.join(os.path.dirname(__file__), 'runmagedon.docx')
-pdf_path = os.path.join(os.path.dirname(__file__), 'runmagedon.pdf')
+docx_path = os.path.join(os.path.dirname(__file__), 'zawody/runmagedon.docx')
+pdf_path = os.path.join(os.path.dirname(__file__), 'zawody/runmagedon.pdf')
 
 def connect_to_db():
     login = db_lib.get_db_data()
